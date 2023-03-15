@@ -91,8 +91,14 @@ videoPopup = document.querySelector('.video__popup');
 document.querySelector('.video__container').addEventListener('click', () => {
   open_popup(videoPopup);
 })
+document.querySelector('.play__video').addEventListener('click', () => {
+  open_popup(videoPopup);
+})
 document.querySelector('.video__close').addEventListener('click', () => {
   close_popup(videoPopup);
+})
+document.querySelector('.open__form').addEventListener('click', () => {
+  open_popup(formPopup);
 })
 document.querySelector('.form__close').addEventListener('click', () => {
   close_popup(formPopup);
@@ -162,15 +168,16 @@ function showDots() {
 
   let dots = document.querySelectorAll('.map__dot');
 
-  for (let i = 0; i < dots.length; i++) {
+  for (let i = 1; i < dots.length; i++) {
+    dots[0].style.display = 'block';
     setTimeout(() => {
       dots[i].style.display = 'block';
-    }, Math.floor(Math.random() * 100) + 1000)
+    }, Math.floor(Math.random() * 1000) + 500)
   }
 
 }
 
-let descrBlock = document.querySelectorAll('.advantages--elem__block');
+let descrBlock = document.querySelectorAll('.advantages__elem');
 
 for (let i = 1; i <= descrBlock.length; i++) {
 
@@ -187,13 +194,7 @@ let showEmployees = document.querySelectorAll('.show__more');
 showEmployees.forEach(btn => {
   btn.addEventListener('click', () => {
 
-    showEmployees.forEach(tab => {
-
-      tab.classList.remove('active');
-      tab.innerHTML = 'Читать далее';
-      tab.parentElement.querySelector('.ellipsis').classList.remove('active');
-      tab.parentElement.querySelector('.employee__hidden').classList.remove('active');
-    })
+   
    
     if(btn.classList.contains('active')){
         btn.innerHTML = 'Читать далее'

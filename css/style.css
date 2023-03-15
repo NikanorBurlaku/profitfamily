@@ -57,11 +57,32 @@ video{
 }
 
 .button {
+    position: relative;
     text-transform: uppercase;
-    background: #FF6F1A;
     border-radius: 60px;
     padding: 8px 18px;
     font-weight: 400;
+    border: 1px solid #FF6F1A;
+    overflow: hidden;
+    z-index: 2;
+}
+.button::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #FF6F1A;
+    z-index: -1;
+    transition: .5s;
+}
+.button:hover::before,
+.first__stage:hover{
+    top: 100%;
+}
+a.button:hover{
+    color: #fff;
 }
 
 .desktop {
@@ -85,7 +106,7 @@ video{
     left: 0;
 }
 .video__block:hover .gradient
-/* .advantages__img--block:hover .gradient,
+/* .advantages__container:hover .gradient,
 .employee__img:hover .gradient,
 .life__img:hover .gradient{ */
     {
@@ -131,8 +152,27 @@ video{
     border-radius: 60px;
     border: 1px solid #FF6F1A;
     padding: 8px 14px;
+    position: relative;
+    overflow: hidden;
+    transition: .5s;
 }
-
+.vacancies__link::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: .5s;
+    background: #FF6F1A;
+    z-index: -1;
+}
+.vacancies__link:hover{
+    color: #0F141A;
+}
+.vacancies__link:hover::before{
+    top: 0;
+}
 
 .vacancies__img {
     display: flex;
@@ -253,8 +293,12 @@ video{
     gap: 70px;
 }
 
-.title__block .link {
+.title__block .open__form {
     color: #0F141A;
+    transition: .5s;
+}
+.open__form:hover{
+    color: #FFFFFF;
 }
 
 .play__video {
@@ -263,6 +307,14 @@ video{
     display: flex;
     align-items: center;
     gap: 10px;
+    transition: .25s;
+}
+.play__video:hover{
+    cursor: pointer;
+    color: #FFFFFF;
+}
+.play__video:hover .play__btn{
+    background: #fff;
 }
 
 .play__btn {
@@ -272,6 +324,7 @@ video{
     padding: 12px;
     background: #FF6F1A;
     border-radius: 0px 60px 60px 0px;
+    transition: .25s;
 }
 
 .video__container {
@@ -417,13 +470,13 @@ li.main__city {
     justify-content: space-between;
 }
 
-.advantages__img--block {
+.advantages__container {
     width: 100%;
     position: relative;
 }
 
 
-.advantages__img--block img {
+.advantages__container img {
     width: 100%;
 }
 
@@ -441,7 +494,7 @@ li.main__city {
     width: 66%;
 }
 
-.advantages--elem__block {
+.advantages__elem {
     color: #FFFFFF;
     display: flex;
     gap: 20px;
@@ -465,8 +518,8 @@ li.main__city {
     transition: 1s;
 }
 
-.advantages--elem__block:hover .advantages h3,
-.advantages--elem__block:hover .advantages p {
+.advantages__elem:hover .advantages h3,
+.advantages__elem:hover .advantages p {
     top: 0;
 }
 
@@ -489,8 +542,10 @@ li.main__city {
     display: block;
     margin-top: 80px;
     background: #FF6F1A;
+    border: 1px solid #FF6F1A;
     border-radius: 60px;
     padding: 14px;
+    transition: .5s;
     text-align: center;
     text-transform: uppercase;
     color: #0F141A;
@@ -1366,7 +1421,7 @@ li.main__city {
         align-items: start;
     }
 
-    .title__block .link {
+    .title__block .open__form {
         width: 100%;
         text-align: center;
     }
@@ -1392,7 +1447,7 @@ li.main__city {
     }
 
     li.main__city {
-        order: 1;
+        order: -1;
     }
 
     .we__description {
@@ -1490,7 +1545,7 @@ li.main__city {
         gap: 40px;
     }
 
-    .advantages--elem__block {
+    .advantages__elem {
         flex-direction: column;
         gap: 15px;
     }
@@ -1501,12 +1556,13 @@ li.main__city {
         width: 100%;
     }
 
-    .advantages__img--block {
+    .advantages__container {
         width: calc(100% + 32px);
-        margin-left: -16px
+        margin-left: -16px;
+        margin-top: 50px;
     }
 
-    .advantages__img--block .gradient {
+    .advantages__container .gradient {
         height: 40px;
     }
 
