@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProfitFamily</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <span class="burger-menu_button mobile">
+                <span class="burger-menu_lines"></span>
+            </span>
+            <a href="#" class="logo">
+                <svg width="111" height="42" viewBox="0 0 111 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M61.7092 11.7101C61.7092 18.1154 57.0058 22.7879 50.5695 22.7879C44.0714 22.7879 39.368 18.1154 39.368 11.7101C39.368 5.30481 44.0714 0.632324 50.5695 0.632324C57.0058 0.632324 61.7092 5.30481 61.7092 11.7101ZM45.0306 11.7101C45.0306 14.9283 47.4442 17.4037 50.5695 17.4037C53.633 17.4037 56.0466 14.8973 56.0466 11.7101C56.0466 8.52294 53.633 6.01651 50.5695 6.01651C47.4442 6.01651 45.0306 8.49199 45.0306 11.7101Z"
+                        fill="white" />
+                    <path
+                        d="M0 0.972705V6.20234L8.63326 6.20217C10.0257 6.20217 11.0469 6.97576 11.0469 8.30633C11.0469 9.66785 10.0257 10.5033 8.63326 10.5033L0 10.5028V22.4475H5.50796V15.5162H8.81892C13.2748 15.5162 16.6786 12.9479 16.6786 8.30633C16.6786 3.57196 13.3057 0.972705 8.81892 0.972705H0Z"
+                        fill="white" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M33.0146 14.3403L37.9656 22.4475H31.715L27.5995 15.5162H25.2478V22.4475H19.7398V0.972705H28.5587C33.0456 0.972705 36.4184 3.57196 36.4184 8.30633C36.4184 11.1222 35.0569 13.1645 33.0146 14.3403ZM30.7867 8.30633C30.7867 6.97576 29.7965 6.20217 28.404 6.20217H25.2478V10.5033H28.404C29.7965 10.5033 30.7867 9.66785 30.7867 8.30633Z"
+                        fill="white" />
+                    <path d="M79.8434 0.972705H65.0214V6.20295L79.8434 6.20217V0.972705Z" fill="white" />
+                    <path d="M65.0214 22.4475V9.66773L79.4411 9.66785V14.6807H70.5294V22.4475H65.0214Z" fill="white" />
+                    <path d="M88.6066 22.4477H83.0986V0.9729H88.6066V22.4477Z" fill="#FF6F1A" />
+                    <path d="M91.5063 6.20237V0.9729H110.134V6.20237H103.574V22.4477H98.0664V6.20237H91.5063Z"
+                        fill="#FF6F1A" />
+                    <path
+                        d="M6.74834 30.4326H0V41.1742H1.36205V36.6238H6.46974V35.3391H1.36205V31.7328H6.74834V30.4326Z"
+                        fill="white" />
+                    <path
+                        d="M28.8311 41.1742L24.6676 30.4326H23.3055L19.1265 41.1742H20.5969L21.6804 38.3108H26.2618L27.3453 41.1742H28.8311ZM23.9711 32.3209L25.7665 37.0107H22.1757L23.9711 32.3209Z"
+                        fill="white" />
+                    <path
+                        d="M47.3498 39.1312L43.7744 30.4326H41.7932V41.1742H43.1553V32.3054L46.7926 41.1742H47.876L51.5133 32.259V41.1742H52.8754V30.4326H50.9097L47.3498 39.1312Z"
+                        fill="white" />
+                    <path d="M66.8843 30.4326V41.1742H68.2463V30.4326H66.8843Z" fill="white" />
+                    <path d="M83.6184 30.4326H82.2563V41.1742H89.0047V39.8741H83.6184V30.4326Z" fill="white" />
+                    <path
+                        d="M105.538 35.432L102.52 30.4326H100.941L104.857 36.8869V41.1742H106.219V36.8869L110.135 30.4326H108.556L105.538 35.432Z"
+                        fill="white" />
+                </svg>
+            </a>
+            <nav class="nav">
+                <a href="#" class="logo mobile">
+                    <svg width="111" height="42" viewBox="0 0 111 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M61.7092 11.7101C61.7092 18.1154 57.0058 22.7879 50.5695 22.7879C44.0714 22.7879 39.368 18.1154 39.368 11.7101C39.368 5.30481 44.0714 0.632324 50.5695 0.632324C57.0058 0.632324 61.7092 5.30481 61.7092 11.7101ZM45.0306 11.7101C45.0306 14.9283 47.4442 17.4037 50.5695 17.4037C53.633 17.4037 56.0466 14.8973 56.0466 11.7101C56.0466 8.52294 53.633 6.01651 50.5695 6.01651C47.4442 6.01651 45.0306 8.49199 45.0306 11.7101Z"
+                            fill="white" />
+                        <path
+                            d="M0 0.972705V6.20234L8.63326 6.20217C10.0257 6.20217 11.0469 6.97576 11.0469 8.30633C11.0469 9.66785 10.0257 10.5033 8.63326 10.5033L0 10.5028V22.4475H5.50796V15.5162H8.81892C13.2748 15.5162 16.6786 12.9479 16.6786 8.30633C16.6786 3.57196 13.3057 0.972705 8.81892 0.972705H0Z"
+                            fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M33.0146 14.3403L37.9656 22.4475H31.715L27.5995 15.5162H25.2478V22.4475H19.7398V0.972705H28.5587C33.0456 0.972705 36.4184 3.57196 36.4184 8.30633C36.4184 11.1222 35.0569 13.1645 33.0146 14.3403ZM30.7867 8.30633C30.7867 6.97576 29.7965 6.20217 28.404 6.20217H25.2478V10.5033H28.404C29.7965 10.5033 30.7867 9.66785 30.7867 8.30633Z"
+                            fill="white" />
+                        <path d="M79.8434 0.972705H65.0214V6.20295L79.8434 6.20217V0.972705Z" fill="white" />
+                        <path d="M65.0214 22.4475V9.66773L79.4411 9.66785V14.6807H70.5294V22.4475H65.0214Z"
+                            fill="white" />
+                        <path d="M88.6066 22.4477H83.0986V0.9729H88.6066V22.4477Z" fill="#FF6F1A" />
+                        <path d="M91.5063 6.20237V0.9729H110.134V6.20237H103.574V22.4477H98.0664V6.20237H91.5063Z"
+                            fill="#FF6F1A" />
+                        <path
+                            d="M6.74834 30.4326H0V41.1742H1.36205V36.6238H6.46974V35.3391H1.36205V31.7328H6.74834V30.4326Z"
+                            fill="white" />
+                        <path
+                            d="M28.8311 41.1742L24.6676 30.4326H23.3055L19.1265 41.1742H20.5969L21.6804 38.3108H26.2618L27.3453 41.1742H28.8311ZM23.9711 32.3209L25.7665 37.0107H22.1757L23.9711 32.3209Z"
+                            fill="white" />
+                        <path
+                            d="M47.3498 39.1312L43.7744 30.4326H41.7932V41.1742H43.1553V32.3054L46.7926 41.1742H47.876L51.5133 32.259V41.1742H52.8754V30.4326H50.9097L47.3498 39.1312Z"
+                            fill="white" />
+                        <path d="M66.8843 30.4326V41.1742H68.2463V30.4326H66.8843Z" fill="white" />
+                        <path d="M83.6184 30.4326H82.2563V41.1742H89.0047V39.8741H83.6184V30.4326Z" fill="white" />
+                        <path
+                            d="M105.538 35.432L102.52 30.4326H100.941L104.857 36.8869V41.1742H106.219V36.8869L110.135 30.4326H108.556L105.538 35.432Z"
+                            fill="white" />
+                    </svg>
+                </a>
+                <ul>
+                    <li><a href="#we" class="nav__link">Кто мы</a></li>
+                    <li><a href="#advantages" class="nav__link">Преимущества</a></li>
+                    <li><a href="#stages" class="nav__link">Этапы подбора</a></li>
+                    <li><a href="#team" class="nav__link">Команда</a></li>
+                    <li><a href="#life" class="nav__link">Жизнь компании</a></li>
+                    <li><a href="#faq" class="nav__link">FAQ</a></li>
+                </ul>
+                <a class="vacancies__link mobile" href="https://hh.ru/employer/2813915">вакансии на hh.ru</a>
+            </nav>
+            <div class="header__social">
+                <a class="vacancies__link desktop" href="https://hh.ru/employer/2813915">вакансии на hh.ru</a>
+                <a href="" class="vacancies__img"><svg width="16" height="11" viewBox="0 0 16 11" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M16 11V1.375L8 7.5625L0 1.375V11H16ZM8 5.5L15.2727 0H0.727273L8 5.5Z" fill="#91969C" />
+                    </svg></a>
+                <a href="" class="vacancies__img"><svg width="18" height="12" viewBox="0 0 18 12" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.74987 11.1699C3.6338 11.1699 0.145354 6.97701 0 0H3.06362C3.16425 5.12094 5.42278 7.29008 7.21176 7.73732V0H10.0966V4.41653C11.8632 4.22646 13.719 2.21386 14.3452 0H17.23C16.7492 2.72819 14.7366 4.74079 13.3054 5.56819C14.7366 6.23906 17.0288 7.99449 17.9009 11.1699H14.7254C14.0434 9.04551 12.344 7.40189 10.0966 7.17827V11.1699H9.74987Z"
+                            fill="#91969C" />
+                    </svg></a>
+            </div>
+            <div class="burger-menu">
+                <div class="burger-menu_overlay"></div>
+            </div>
+        </header>
+
+
+
+        <section class="title__block">
+            <h1 class="title">Добро пожаловать в&nbsp;<span>семью</span> профессионалов</h1>
+            <div class="title__buttons">
+                <a href="https://hh.ru/employer/2813915" class="link button">Хочу к вам</a>
+                <div class="play__video">Смотреть видео <span class="play__btn">
+                        <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 6.54102L0.75 13.0362L0.750001 0.0458245L12 6.54102Z" fill="#0F141A" />
+                        </svg></span></div>
+            </div>
+            <div class="video__container">
+                <video src="video/short.mp4" width="100%" height="100%" muted autoplay loop loading="lazy"></video>
+                <span class="gradient"></span>
+            </div>
+        </section>
+    </div>
+    <div class="cities">
+        <ul class="cities__list">
+            <li>Екатеринбург</li>
+            <li>Ярославль</li>
+            <li>Севастополь</li>
+            <li>Астана</li>
+            <li>Казань</li>
+            <li>Ереван</li>
+            <li>Санкт-Петербург</li>
+            <li>Батуми</li>
+            <li class="main__city">Краснодар</li>
+            <li>Лимасcол</li>
+            <li>Париж</li>
+            <li>Москва</li>
+            <li>Барнаул</li>
+            <li>Тбилиси</li>
+            <li>Воронеж</li>
+            <li>Пенза</li>
+            <li>Калининград</li>
+        </ul>
+    </div>
+    <div class="container">
+        <section class="we" id="we">
+            <div class="we__description">
+                <div class="col">
+                    <h2 class="second__title">- Кто мы -</h2>
+                </div>
+                <div class="col">
+                    <p>ProfitFamily - это семейство компаний международного уровня, в основе которых лежат IT
+                        технологии. </p>
+                </div>
+                <div class="col">
+                    <p>Мы создаем сильные и прибыльные продукты, постоянно растем и совершенствуемся, круто проводим
+                        время вместе (и не только на работе!), а еще ходим по офису в тапочках :)</p>
+                </div>
+            </div>
+
+            <h3 class="third--title">Наши продукты</h3>
+            <div class="product__wrapper">
+                <div class="product">
+                    <a href="https://oneprofit.ru/" class="product__block">
+                        <h3 class="product__title">oneprofit</h3>
+                        <div class="product__body">
+                            <p>Одна из крупнейших CPA платформ</p>
+                            <span>
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.17188 12.7681H19.1719" stroke="white" stroke-width="2"
+                                        stroke-linecap="square" stroke-linejoin="round" />
+                                    <path d="M12.1719 5.76807L19.1719 12.7681L12.1719 19.7681" stroke="white"
+                                        stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="https://ads2.bid/" class="product__block">
+                        <h3 class="product__title">ads2.bid</h3>
+                        <div class="product__body">
+                            <p>Нативная сеть</p>
+                            <span>
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.17188 12.7681H19.1719" stroke="white" stroke-width="2"
+                                        stroke-linecap="square" stroke-linejoin="round" />
+                                    <path d="M12.1719 5.76807L19.1719 12.7681L12.1719 19.7681" stroke="white"
+                                        stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="https://pushprofit.ru/" class="product__block">
+                        <h3 class="product__title">pushprofit</h3>
+                        <div class="product__body">
+                            <p>Сервис push-уведомлений</p>
+                            <span>
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.17188 12.7681H19.1719" stroke="white" stroke-width="2"
+                                        stroke-linecap="square" stroke-linejoin="round" />
+                                    <path d="M12.1719 5.76807L19.1719 12.7681L12.1719 19.7681" stroke="white"
+                                        stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="advantages" id="advantages">
+            <div class="advantages__title--block">
+                <h2 class="second__title">- Преимущества работы с&nbsp;нами&nbsp;-</h2>
+                <div class="advantages__img--block desktop">
+                    <img src="images/advantages.png" alt="Our staff" loading="lazy">
+                    <span class="gradient"></span>
+                </div>
+            </div>
+            <div class="advantages__description">
+                <div class="advantages--elem__block" data-order="1">
+                    <h3 class=" third--title">Стремительный рост и&nbsp;развитие</h3>
+                    <p>За последние 2 года выросли из стартапа в холдинг с разными
+                        направленностями бизнеса, расширили команды и запустили новые проекты.</p>
+                </div>
+                <div class="advantages--elem__block" data-order="2">
+                    <h3 class=" third--title">Команда профессионалов</h3>
+                    <p>Ты получишь возможность работать вместе с теми, кто горит
+                        продуктом и создавал его с нуля! Это сплоченная команда профи, которые отлично знают
+                        архитектуру. Поможем быстро разобраться в проектах новичкам и поделимся своей экспертизой.</p>
+                </div>
+                <div class="advantages--elem__block" data-order="3">
+                    <h3 class=" third--title">Гибкость, открытость к&nbsp;новому, отсутствие излишнего
+                        контроля</h3>
+                    <p>Мы соблюдаем политику открытых дверей и прозрачности в
+                        решении вопросов, а еще не любим тиранию. Если ты - часть команды, мы доверяем тебе. Поэтому не
+                        будем контролировать тебя каждую минуту. Если ты справляешься со своими задачами, вовремя
+                        укладываясь в сроки, ты можешь расслабиться в массажном кресле, поиграть в приставку или
+                        настолки)</p>
+                </div>
+                <div class="advantages--elem__block" data-order="4">
+                    <h3 class="third--title">Уникальный опыт</h3>
+                    <p>ProfitFamily создаёт масштабные inhouse продукты в узкой
+                        нише CPA маркетинга и programmatic технологий. Мы являемся крупным игроком рынка с крутым
+                        функционалом. Мы не зависим от прихоти инвесторов, у нас нет капризных внешних заказчиков,
+                        скучных проектов на поддержке. Здесь только продукты для себя, своими силами, с долгосрочной
+                        стратегией развития и амбициозными планами. Давай расти и развиваться вместе! У нас ты получишь
+                        топовый опыт в adtech.</p>
+                </div>
+                <div class="advantages--elem__block" data-order="5">
+                    <h3 class=" third--title">Обучение</h3>
+                    <p>Если есть интересный курс или профессиональная конференция,
+                        оплатим их специально для тебя. Еще у нас есть внутренние курсы для сотрудников и каждый месяц
+                        пополняемая Онлайн Библиотека. Мы всегда поощряем прокачку скиллов и расширение знаний.</p>
+                </div>
+            </div>
+            <div class="advantages__img--block mobile">
+                <img src="images/advantages.png" alt="Our staff" loading="lazy">
+                <span class="gradient"></span>
+            </div>
+        </section>
+        <section class="stages" id="stages">
+            <div class="stages__title">
+                <h2 class="second__title">- Этапы подбора -</h2>
+                <p class="stages__description">У нас прозрачный процесс найма. В среднем, от первого контакта до оффера
+                    проходит от 4 до 8 дней. Опционально может быть небольшое тестовое задание. HR будет на связи в
+                    каждый из этапов.</p>
+            </div>
+            <a href="https://hh.ru/employer/2813915" class="first__stage"><span>Узнать о вакансиях и
+                    откликнуться</span></a>
+            <div class="stages__wrapper">
+                <div class="stage__elem">
+                    <p class="stage__description">Познакомиться с&nbsp;рекрутером в&nbsp;мессенджере и&nbsp;договориться
+                        об&nbsp;общении по&nbsp;телефону</p>
+                    <span class="stage__number">- 02 -</span><span class="stage__time"></span>
+                </div>
+                <div class="stage__elem">
+                    <p class="stage__description">Пройти первичное телефонное интервью</p>
+                    <span class="stage__number">- 03 -</span><span class="stage__time">15-30
+                        мин</span>
+                </div>
+                <div class="stage__elem">
+                    <p class="stage__description">Пройти финальное интервью с&nbsp;руководителем</p>
+                    <span class="stage__number">- 04 -</span><span class="stage__time">40-60
+                        мин</span>
+                </div>
+                <div class="stage__elem">
+                    <p class="stage__description">Получить job offer и&nbsp;выйти на работу</p>
+                    <span class="stage__number">- 05 -</span><span class="stage__time"></span>
+                </div>
+            </div>
+        </section>
+        <section class="team" id="team">
+            <div class="team__title">
+                <h2 class="second__title">- Команда профессионалов -</h2>
+            </div>
+            <div class="first__slider">
+                <div class="slider__elem">
+                    <div class="employee__img">
+                        <img src="images/employee-1.png" alt="employee photo" loading="lazy">
+                        <span class="gradient"></span>
+                    </div>
+                    <h3 class="employee__name">Александр Федотов, тимлид</h3>
+                    <div class="employee__description">Саша - архитектор и тимлид проекта RTB аукцион. Это внутренняя
+                        система ротации с нагрузкой в 6000 rps в пике.
+                        <span class="ellipsis">...</span>
+                        <p class="employee__hidden">
+                            Опыт в разработке у Саши составляет 10+ лет. Основной стек: Golang, NET. Он работает в
+                            ProfitFamily с 2018 года, проект RTB писался с нуля под его началом. Саша управляет командой
+                            middle и senior разработчиков, которые пишут на C# и Golang.</p>
+                    </div>
+                    <button class="show__more">Читать далее</button>
+                </div>
+                <div class="slider__elem">
+                    <div class="employee__img">
+                        <img src="images/employee-2.png" alt="employee photo" loading="lazy">
+                        <span class="gradient"></span>
+                    </div>
+                    <h3 class="employee__name">Данил Копылов, CTO</h3>
+                    <div class="employee__description">Данил пришёл в ProfitFamily fullstack разработчиком в команду
+                        ads2.bid, дорос до тимлида. Потом полетел
+                        <span class="ellipsis">...</span>
+                        <p class="employee__hidden">
+                            на DevOps конференцию и вернулся уже с идеей создания своего отдела. Поработав руководителем
+                            IT
+                            отдела, Данил получил предложение стать CTO компании и сейчас успешно справляется с задачами
+                            руководителя.</p>
+                    </div>
+                    <button class="show__more">Читать далее</button>
+                </div>
+                <div class="slider__elem">
+                    <div class="employee__img">
+                        <img src="images/employee-3.png" alt="employee photo" loading="lazy">
+                        <span class="gradient"></span>
+                    </div>
+                    <h3 class="employee__name">Арина Чернова, ведущий бизнес-аналитик</h3>
+                    <div class="employee__description">Арина пришла в компанию в 2021 году как бизнес-аналитик. Она
+                        занималась самостоятельным
+                        <span class="ellipsis">...</span>
+                        <p class="employee__hidden">
+                            формированием Базы знаний и процессов ProfitFamily, успела описать множество разделов, орг.
+                            структуру, а также выступала администратором при запуске новых проектов и направлений
+                            компании.
+                            А еще Арина - монстр обучения - за время работы в компании посетила несколько проф.
+                            конференций
+                            и прошла множество курсов. Так держать!</p>
+                    </div>
+                    <button class="show__more">Читать далее</button>
+                </div>
+                <div class="slider__elem">
+                    <div class="employee__img">
+                        <img src="images/employee-4.png" alt="employee photo" loading="lazy">
+                        <span class="gradient"></span>
+                    </div>
+                    <h3 class="employee__name">Вадим Родимкин, байер</h3>
+                    <div class="employee__description">Вадим работает в компании с 2018 года. Изначально приходил как
+                        верстальщик лендингов, но со временем понял
+                        <span class="ellipsis">...</span>
+                        <p class="employee__hidden">
+                            , что интернет-реклама ему интереснее, и перешел в отдел новостного баинга, где работает до
+                            сих
+                            пор. Вадиму нравится, что в ProfitFamily можно самому выбрать вектор своего развития, что
+                            выделяются средства на проливы трафика. Еще он отмечает возможность удаленки, частые
+                            корпоративы
+                            и активности (футбол по выходным, чемпионат по фифе, квизы)</p>
+                    </div>
+                    <button class="show__more">Читать далее</button>
+                </div>
+                <div class="slider__elem">
+                    <div class="employee__img">
+                        <img src="images/employee-5.png" alt="employee photo" loading="lazy">
+                        <span class="gradient"></span>
+                    </div>
+                    <h3 class="employee__name">Анна Замыслова, HR</h3>
+                    <div class="employee__description">Аня присоединилась к ProfitFamily в августе 2021 года с опытом
+                        рекрутера из кадрового агентства. Поначалу она вела
+                        <span class="ellipsis">...</span>
+                        <p class="employee__hidden">
+                            подбор и новую для себя задачу - адаптацию. Со временем стала подключаться к
+                            разнообразным HR проектам и выросла до позиции HR менеджера, который совмещает подбор
+                            персонала
+                            с широким спектром других задач.</p>
+                    </div>
+                    <button class="show__more">Читать далее</button>
+                </div>
+                <div class="slider__elem">
+                    <div class="employee__img">
+                        <img src="images/employee-6.png" alt="employee photo" loading="lazy">
+                        <span class="gradient"></span>
+                    </div>
+                    <h3 class="employee__name">Даниил Смола, тимлид команды баинга</h3>
+                    <div class="employee__description">Даниил пришёл на должность байера в новостной отдел в 2019 году.
+                        С тех пор
+                        <span class="ellipsis">...</span>
+                        <p class="employee__hidden">
+                            , набравшись опыта, в последующие несколько лет открыл направление Индонезии для закупки
+                            трафика. С 2022 года
+                            занимается развитием своей команды в новостном баинге.</p>
+                    </div>
+                    <button class="show__more">Читать далее</button>
+                </div>
+
+            </div>
+        </section>
+        <section class="map">
+            <div class="map__title">
+                <h3 class="counter">0</h3>
+                <div class="departments">
+                    <div class="department__block">медиабаинг</div>
+                    <div class="department__block">разработка</div>
+                    <div class="department__block">devOps</div>
+                    <div class="department__block">клиентский сервис</div>
+                    <div class="department__block">бэк-офис</div>
+                </div>
+            </div>
+            <div class="map__block">
+                <div class="map__description">Главный офис находится в Краснодаре, еще один - в Лимассоле, а также
+                    множество удаленных сотрудников по всему миру.</div>
+                <div class="map__img--block"><img src="images/map.svg" alt="World map" class="map__img"
+                        alt="employee photo" loading="lazy">
+                    <ul class="dots__lits">
+                        <li class="map__dot" style="display: block;"></li>
+                        <li class="map__dot"></li>
+                        <li class="map__dot"></li>
+                        <li class="map__dot"></li>
+                        <li class="map__dot"></li>
+                        <li class="map__dot"></li>
+                        <li class="map__dot"></li>
+                        <li class="map__dot"></li>
+                        <li class="map__dot"></li>
+                        <li class="map__dot"></li>
+                        <li class="map__dot"></li>
+                        <li class="map__dot"></li>
+                        <li class="map__dot"></li>
+                        <li class="map__dot"></li>
+                        <li class="map__dot"></li>
+                        <li class="map__dot"></li>
+                        <li class="map__dot"></li>
+                        <li class="map__dot"></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="life" id="life">
+            <div class="life__title">
+                <h2 class="second__title">- Жизнь компании -</h2>
+                <p class="life__description">В ProfitFamily мы регулярно делаем пересмотры окладов, полностью оплачиваем
+                    обучения и посещения конференций, дарим подарки на день рождения и годовщину работы, предоставляем
+                    ДМС со стоматологией для жителей Краснодара.</p>
+                <p class="life__description">Мы общительные и активные, проводим время вместе как в онлайн, так и
+                    оффлайн формате. Любим посиделки в уютном офисе, регулярные веселые корпоративы (в том числе для
+                    удаленных сотрудников), спортивные состязания, квесты и квизы, общие выезды на природу.</p>
+            </div>
+            <div class="second__slider">
+                <div class="life__img">
+                    <img src="images/life-1.png" alt="Photo of company life" loading="lazy">
+                    <span class="gradient"></span>
+                </div>
+                <div class="life__img">
+                    <img src="images/life-2.png" alt="Photo of company life" loading="lazy">
+                    <span class="gradient"></span>
+                </div>
+                <div class="life__img">
+                    <img src="images/life-3.png" alt="Photo of company life" loading="lazy">
+                    <span class="gradient"></span>
+                </div>
+                <div class="life__img">
+                    <img src="images/life-4.png" alt="Photo of company life" loading="lazy">
+                    <span class="gradient"></span>
+                </div>
+                <div class="life__img">
+                    <img src="images/life-5.png" alt="Photo of company life" loading="lazy">
+                    <span class="gradient"></span>
+                </div>
+                <div class="life__img">
+                    <img src="images/life-6.png" alt="Photo of company life" loading="lazy">
+                    <span class="gradient"></span>
+                </div>
+                <div class="life__img">
+                    <img src="images/life-7.png" alt="Photo of company life" loading="lazy">
+                    <span class="gradient"></span>
+                </div>
+                <div class="life__img">
+                    <img src="images/life-8.png" alt="Photo of company life" loading="lazy">
+                    <span class="gradient"></span>
+                </div>
+            </div>
+        </section>
+        <section class="faq" id="fag">
+            <h2 class="second__title">- FAQ -</h2>
+            <div class="faq__block">
+                <div class="faq__elem">
+                    <div class="faq__title--block">
+                        <h3 class="faq__title third--title">Как проходит адаптация в&nbsp;компании?</h3>
+                        <img src="images/arrow-faq.svg" alt="" class="faq__arrow">
+                    </div>
+                    <p class="faq__description">
+                        В твой первый день HR проведет онбординг, познакомит с командой и поможет трудоустроиться. Для
+                        быстрого погружения в специфику работы, процессы и наши продукты у нас есть ознакомительные
+                        материалы для новичка, курс по адаптации и внутренняя База знаний.
+                    </p>
+                </div>
+                <div class="faq__elem">
+                    <div class="faq__title--block">
+                        <h3 class="faq__title third--title">Если я нахожусь не в&nbsp;России, могу ли я устроиться
+                            работать
+                            в&nbsp;ProfitFamily?</h3>
+                        <img src="images/arrow-faq.svg" alt="" class="faq__arrow">
+                    </div>
+                    <p class="faq__description">
+                        Да! С нами можно работать, даже находясь в другой стране. Мы найдём способ сотрудничать с тобой.
+                        Оставь заявку, и мы индивидуально подойдем к твоему случаю. Наш часовой пояс для работы - мск.
+                    </p>
+                </div>
+                <div class="faq__elem">
+                    <div class="faq__title--block">
+                        <h3 class="faq__title third--title">Я IT специалист. Есть ли у&nbsp;вас аккредитованная IT
+                            компания, куда я
+                            могу
+                            устроиться?</h3>
+                        <img src="images/arrow-faq.svg" alt="" class="faq__arrow">
+                    </div>
+                    <p class="faq__description">
+                        Да, у нас есть компания для сотрудничества с IT специалистами с официальным статусом IT
+                        компании.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="place">
+            <h2 class="place__title">Займи <span>свое</span> место в&nbsp;<span>ProfitFamily</span></h2>
+            <p class="place__text">Не нашел подходящую вакансию? Давай знакомиться, что-нибудь придумаем</p>
+            <button class="fill__form">Заполнить анкету</button>
+        </section>
+        <footer class="footer">
+            <div class="footer__title">
+                <p class="logo__text">ProfitFamily <span id="year"></span></p><a href="" class="footer__mail"><svg
+                        width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M16 11V1.375L8 7.5625L0 1.375V11H16ZM8 5.5L15.2727 0H0.727273L8 5.5Z" fill="#91969C" />
+                    </svg> hrprofitfamily@adnative.am</a>
+            </div>
+            <div class="info__text">
+                <p>Общество с ограниченной ответственностью «Эднейтив»</p>
+                <p>E-mail info@adnative.am ИНН: 08240888 Tel. +37493145867 Юридический адрес: д.27, ул.Н.Тигранян,
+                    Арабкир 0014, Ереван, Армения Регистрационный номер: 264.110.1276216 Директор: Jonathan Raharjo</p>
+            </div>
+        </footer>
+    </div>
+
+    <div class="form__popup">
+        <div class="form__block">
+            <form action="">
+                <div class="form__header">
+                    <p class="form__title">Расскажи о себе, и&nbsp;мы свяжемся с&nbsp;тобой в течение трех рабочих дней
+                    </p>
+                    <div class="input__group">
+                        <input type="text" name="name" class="form__input" placeholder="Имя*">
+                        <input type="tel" name="phone" class="form__input" placeholder="Телефон*">
+                        <input type="text" name="telegram" class="form__input" placeholder="Телеграм">
+                    </div>
+                </div>
+
+
+                <div class="radio__group">
+                    <label for="html" class="radio__label active">
+                        <input type="radio" id="link" name="radio" class="input__radio">
+                        Ссылка на резюме
+                    </label>
+                    <label for="html" class="radio__label">
+                        <input type="radio" id="file" name="radio" class="input__radio" checked>
+                        Файл резюме
+                    </label>
+                </div>
+
+                <div class="change textarea">
+                    <div class="file__group">
+                        <textarea name="info" placeholder="Дополнительная информация" class="form__textarea"></textarea>
+                    </div>
+                    <div class="file__group">
+                        <div class="input__wrapper">
+                            <input name="file" type="file" id="input__file" class="input__file" multiple>
+                            <label for="input__file" class="input__file-button">
+                                <p class="desktop">Перетащи или <u>загрузи файл</u>
+                                </p>
+                                <p class="mobile"><u>Загрузи файл</u></p>
+                                <span>(doc, pdf, docx - до 5 Мб)</span>
+                            </label>
+                        </div>
+                        <textarea name="info" placeholder="Дополнительная информация" class="form__textarea"></textarea>
+                    </div>
+                </div>
+                <div class="submit__block">
+                    <label for="checkbox" class="checkbox__label">
+                        <input type="checkbox" name="checkbox">
+                        <p>Я даю свое согласие на обработку персональных данных в соответствии с полным текстом <a
+                                href="/agreement.html">Согласия</a> и <a href="/privacy.html">Политикой
+                                конфиденциальности</a></p>
+                    </label>
+                    <input class="form__submit button" type="submit" value="отправить">
+                </div>
+
+            </form>
+
+            <span class="form__close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="square"
+                        stroke-linejoin="round" />
+                    <path d="M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="square"
+                        stroke-linejoin="round" />
+                </svg>
+            </span>
+        </div>
+    </div>
+    <div class="thk__popup">
+        <div class="thk__block">
+            <h3 class="thk__title">Спасибо</h3>
+            <p>Мы скоро свяжемся</p>
+            <button class="thk__btn">хорошо, жду</button>
+            <span class="thk__close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="square"
+                        stroke-linejoin="round" />
+                    <path d="M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="square"
+                        stroke-linejoin="round" />
+                </svg>
+            </span>
+        </div>
+    </div>
+    <div class="video__popup">
+        <div class="video__block">
+            <video src="video/short.mp4" width="100%" height="100%" muted controls="lazy"></video>
+            <span class="video__close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="square"
+                        stroke-linejoin="round" />
+                    <path d="M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="square"
+                        stroke-linejoin="round" />
+                </svg>
+            </span>
+        </div>
+    </div>
+    </div>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
