@@ -1025,9 +1025,6 @@ li.main__city {
     align-items: center;
     justify-content: center;
 }
-.video__popup{
-    display: flex;
-}
 
 .form__block,
 .thk__block,
