@@ -1340,12 +1340,12 @@ li.main__city {
         margin-top: 30px;
     }
 
-    .video__block {
+    .video__container {
         width: calc(100% + 32px);
         margin-right: -16px;
     }
 
-    .video__block .gradient {
+    .video__container .gradient {
         top: 0;
         height: 40px;
     }
