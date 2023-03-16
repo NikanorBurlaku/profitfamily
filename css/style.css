@@ -541,7 +541,6 @@ li.main__city {
 .first__stage {
     display: block;
     margin-top: 80px;
-    background: #FF6F1A;
     border: 1px solid #FF6F1A;
     border-radius: 60px;
     padding: 14px;
@@ -552,6 +551,11 @@ li.main__city {
     position: relative;
 }
 
+.first__stage .stage__number {
+    position: absolute;
+    left: 14px;
+    line-height: 22px;
+}
 
 .stages__wrapper {
     margin-top: 50px;
@@ -594,8 +598,7 @@ li.main__city {
     align-items: center;
 }
 
-.stage__number,
-.first__stage::before {
+.stage__number{
 
     font-weight: 900;
     font-size: 24px;
@@ -603,12 +606,6 @@ li.main__city {
     color: #FFFFFF;
 }
 
-.first__stage::before {
-    content: '- 01 -';
-    position: absolute;
-    left: 14px;
-    line-height: 22px;
-}
 
 
 /* team */
@@ -1247,6 +1244,10 @@ li.main__city {
 
 .form__submit {
     color: #FFFFFF;
+    transition: .5s;
+}
+.form__submit:hover{
+    color: #0F141A;
 }
 
 .form__close,
