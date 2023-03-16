@@ -419,7 +419,9 @@ a.button:hover {
     position: relative;
     cursor: pointer;
 }
-
+.video__container .gradient{
+    mix-blend-mode: overlay;
+}
 
 
 /* cities */
