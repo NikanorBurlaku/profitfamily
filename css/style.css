@@ -507,7 +507,6 @@ li.main__city {
 
 .advantages .gradient {
     top: 0;
-    mix-blend-mode: color;
 }
 
 .advantages__description {
@@ -1250,12 +1249,12 @@ li.main__city {
     position: absolute;
     left: 0;
     bottom: 0;
-    background: url(/images/radio.png) 0 0 no-repeat;
+    background: url(../images/radio.png) 0 0 no-repeat;
 }
 
 /* Checked */
 .radio__label.active:before {
-    background: url(/images/radio-checked.png) 0 0 no-repeat;
+    background: url(../images/radio-checked.png) 0 0 no-repeat;
 }
 
 .change {
