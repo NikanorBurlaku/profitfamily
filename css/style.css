@@ -212,9 +212,6 @@ a.button:hover {
     -moz-transition: 0.4s;
     -o-transition: 0.4s;
     transition: 0.4s;
-}
-
-.burger-menu_button:hover {
     cursor: pointer;
 }
 
@@ -342,7 +339,7 @@ a.button:hover {
 }
 
 .play__video:hover .play__btn {
-    background: #fff;
+    background: #B9BEC4;
 }
 
 .play__btn {
@@ -359,11 +356,9 @@ a.button:hover {
     z-index: 1;
     width: 50%;
     position: relative;
-}
-
-.video__container:hover {
     cursor: pointer;
 }
+
 
 
 /* cities */
@@ -645,6 +640,39 @@ li.main__city {
 
 .first__slider {
     width: 66%;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.progress {
+    width: 100%;
+    height: 6px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 30px;
+    background-color: rgba(15, 20, 26, 0.5);
+    background-image: linear-gradient(to right, #fff, #fff);
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+
+    transition: background-size .4s ease-in-out;
+}
+
+#progress-1 {
+    margin-top: 30px;
+}
+
+#progress-2 {
+    margin-top: 40px;
 }
 
 .slider__elem {
@@ -978,16 +1006,17 @@ li.main__city {
     gap: 50px;
 }
 
-.faq__elem {
+.faq__container {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.faq__title--block {
+.faq__elem {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 }
 
 .faq__title {
@@ -1134,7 +1163,7 @@ li.main__city {
     width: 45%;
 }
 
-.input__group {
+.inputs {
     width: 45%;
     display: flex;
     flex-direction: column;
@@ -1144,13 +1173,48 @@ li.main__city {
 .form__input {
     width: 100%;
     background: #FFFFFF;
-    color: #91969C;
+    color: #0F141A;
     padding: 8px 14px 10px;
 }
 
-.form__input:active {
+.input__group {
+    position: relative;
+
+}
+
+.input__group:nth-child(1)::before {
+    content: 'Имя*';
+}
+
+.input__group:nth-child(2)::before {
+    content: 'Телефон*';
+}
+
+.input__group:nth-child(3)::before {
+    content: 'Телеграм';
+}
+
+.input__group::before {
+    display: none;
+    font-size: 10px;
+    line-height: 140%;
+    position: absolute;
+    top: 0;
+    transform: translateY(0);
+    left: 14px;
+    transition: .5s;
+}
+
+.input__group:hover::before {
+    display: block;
+}
+
+.input__group:hover .form__input::placeholder {
+    color: transparent;
+}
+
+.form__input:focus {
     border: 1px solid #B9BEC4;
-    color: #0F141A;
 }
 
 .radio__group {
@@ -1243,11 +1307,12 @@ li.main__city {
     background: #FFFFFF;
     width: 100%;
     margin-top: 30px;
-    resize: vertical;
+    resize: none;
     width: 100%;
     height: 70px;
     overflow-y: scroll;
     outline: none;
+    color: #0F141A;
 }
 
 .submit__block {
@@ -1256,27 +1321,89 @@ li.main__city {
     margin-top: 40px;
 }
 
-.checkbox__label {
+.agreement {
     display: flex;
     align-items: start;
     width: 55%;
     gap: 5px;
 }
 
-.checkbox__label p,
-.checkbox__label a {
+.agreement p,
+.agreement a {
     font-size: 10px;
     line-height: 120%;
     color: #91969C;
 }
 
-.checkbox__label a {
+.agreement p {
+    padding-left: 20px;
+}
+
+.agreement a {
     text-decoration: underline;
+}
+
+.check__label {
+    position: relative;
+}
+
+.check__label input {
+    position: absolute;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 14px;
+    width: 14px;
+    background: #FFFFFF;
+}
+
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.check__label input.checked~.checkmark:after {
+    display: block;
+}
+
+.check__label .checkmark:after {
+    left: 5px;
+    top: 0px;
+    width: 5px;
+    height: 10px;
+    border: 2px solid #B9BEC4;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .form__submit {
     color: #FFFFFF;
     transition: .5s;
+}
+
+.form__submit:disabled {
+    background: #B9BEC4;
+    border: none;
+    cursor: default;
+}
+
+.form__submit:disabled:hover {
+    color: #fff;
+}
+
+.form__submit:disabled::before {
+    top: 100%;
+    color: #fff;
 }
 
 .form__submit:hover {
@@ -1296,11 +1423,6 @@ li.main__city {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.form__close:hover,
-.thk__close:hover,
-.video__close:hover {
     cursor: pointer;
 }
 
@@ -1343,6 +1465,39 @@ li.main__city {
     padding: 0;
 }
 
+/* policy */
+.logo {}
+
+.policy__wrapper {
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.policy__title {
+    width: 25%;
+}
+
+.policy__text {
+    width: 75%;
+    font-size: 16px;
+    line-height: 140%;
+    color: #B9BEC4;
+}
+
+.policy__text ul {
+    margin-left: 20px;
+    margin-bottom: 16px;
+}
+
+.policy__text ul li {
+    list-style-type: disc;
+}
+
+.policy__text p {
+    margin-bottom: 16px;
+}
+
 @media (max-width:1024px) {
     .title {
         font-size: 78px;
@@ -1372,8 +1527,7 @@ li.main__city {
         -moz-transition: 0.8s;
         -o-transition: 0.8s;
         background: #0F141A;
-        width: 55%;
-        max-width: 300px;
+        width: 250px;
         height: 100vh;
         transition: 0.8s;
     }
@@ -1459,6 +1613,7 @@ li.main__city {
     .title {
         font-size: 32px;
         line-height: 100%;
+        max-width: 320px;
         left: 16px;
         top: 190px;
     }
@@ -1481,17 +1636,14 @@ li.main__city {
         margin: 80px 0;
     }
 
-    /* хром, сафари */
     .cities::-webkit-scrollbar {
         width: 0;
     }
 
-    /* ie 10+ */
     .cities {
         -ms-overflow-style: none;
     }
 
-    /* фф (свойство больше не работает, других способов тоже нет)*/
     .cities {
         overflow: -moz-scrollbars-none;
     }
@@ -1539,21 +1691,6 @@ li.main__city {
         margin-top: 45px;
     }
 
-    /* .product {
-      margin-top: 150px;
-       top: 625px;
-      white-space: nowrap;
-      display: flex;
-      width: 200vw;
-      position: fixed;
-      flex-direction: row;
-      flex-wrap: nowrap; 
-    }
-    
-    .advantages {
-      font-size: 20px;
-      margin-top: 2150px;
-    } */
     .we {
         overflow: hidden;
     }
@@ -1648,7 +1785,7 @@ li.main__city {
 
     .first__stage {
         margin-top: 45px;
-        padding-left: 140px;
+        padding-left: 120px;
         text-align: left;
     }
 
@@ -1670,7 +1807,7 @@ li.main__city {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-        gap: 10px 25px;
+        gap: 0;
         grid-template-areas:
             "stage__number stage__description stage__description "
             "stage__number stage__description stage__description "
@@ -1680,7 +1817,6 @@ li.main__city {
     .stage__elem:first-of-type,
     .stage__elem:last-of-type {
 
-        gap: 0px 25px;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas:
@@ -1786,7 +1922,7 @@ li.main__city {
         gap: 40px;
     }
 
-    .faq__elem {
+    .faq__container {
         gap: 15px;
     }
 
@@ -1813,7 +1949,8 @@ li.main__city {
     }
 
     .footer {
-        margin-top: 90px;
+        width: calc(100% - 32px);
+        margin: 90px auto 0;
     }
 
     .footer__title {
@@ -1823,6 +1960,7 @@ li.main__city {
 
     .info__text {
         margin: 18px 0 5px;
+        font-size: 8px;
     }
 
     .form__block,
@@ -1841,7 +1979,7 @@ li.main__city {
         width: 80%;
     }
 
-    .input__group {
+    .inputs {
         width: 100%;
     }
 
@@ -1869,7 +2007,7 @@ li.main__city {
         flex-direction: column-reverse;
     }
 
-    .checkbox__label {
+    .agreement {
         width: 100%;
         margin-top: 30px;
     }
@@ -1884,5 +2022,29 @@ li.main__city {
     .thk__btn {
         margin-top: 300px;
         width: 100%;
+    }
+
+    .check__label .checkmark:after {
+        top: 2px;
+    }
+
+    .policy__header {
+        padding: 16px 16px 0;
+    }
+
+    .policy__wrapper {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 16px;
+    }
+    .policy__title,
+    .policy__text{
+        width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    .title__buttons {
+        margin-top: 145px;
     }
 }

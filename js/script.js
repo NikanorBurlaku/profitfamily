@@ -1,4 +1,7 @@
-function burgerMenu(selector) { //adaptive menu
+
+$(document).ready(function() {
+  
+  function burgerMenu(selector) { //adaptive menu
   let menu = $(selector);
   let button = menu.find('.burger-menu_button', '.burger-menu_lines');
   let links = menu.find('.burger-menu_link');
@@ -23,42 +26,77 @@ function burgerMenu(selector) { //adaptive menu
   }
 }
 
-burgerMenu('.header');
+burgerMenu('.header')
 
-$('.first__slider').slick({
-  infinite: true,
-  arrows: true,
-  slidesToShow: 3,
-  slidesToScroll: 3,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-      },
-    },
-  ],
-});
-$('.second__slider').slick({
-  infinite: true,
-  arrows: true,
-  slidesToShow: 3,
-  slidesToScroll: 3,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-      },
-    },
-  ],
+  var $slider1 = $('.first__slider');
+  var $progressBar1 = $('#progress-1');
+  var $progressBarLabel1 = $( '#progress-1 .slider__label' );
+  
+  $slider1.on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
+    var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
+    
+    $progressBar1
+      .css('background-size', calc + '% 100%')
+      .attr('aria-valuenow', calc );
+    
+    $progressBarLabel1.text( calc + '% completed' );
+  });
+  
+  $slider1.slick({
+    infinite: true,
+      arrows: true,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+          },
+        },
+      ],
+  });  
+
+
+  var $slider2 = $('.second__slider');
+  var $progressBar2 = $('#progress-2');
+  var $progressBarLabel2 = $( '#progress-2 .slider__label' );
+  
+  $slider2.on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
+    var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
+    
+    $progressBar2
+      .css('background-size', calc + '% 100%')
+      .attr('aria-valuenow', calc );
+    
+    $progressBarLabel2.text( calc + '% completed' );
+  });
+  
+  $slider2.slick({
+    infinite: true,
+      arrows: true,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+          },
+        },
+      ],
+  });
+
+
 });
 
-let links = document.querySelectorAll('.faq__title--block');
+
+
+let links = document.querySelectorAll('.faq__elem'); //показать вкладки faq 
 let tabImages = document.querySelectorAll('.faq__arrow')
 let tabs = document.querySelectorAll('.faq__description')
 
@@ -79,47 +117,15 @@ radioLabels.forEach(label => {
       label.classList.remove('active');
     })
     let input = label.querySelector('input')
-    console.log(1);
     input.checked = true;
     label.classList.add('active');
     document.querySelector('.change').classList.toggle('textarea');
   })
 })
 
-formPopup = document.querySelector('.form__popup');
+formPopup = document.querySelector('.form__popup'); //скрыть и показать всплывающие окна
 thkPopup = document.querySelector('.thk__popup');
 videoPopup = document.querySelector('.video__popup');
-
-// document.querySelector('.video__container').addEventListener('click', () => {
-//   open_popup(videoPopup);
-// })
-// document.querySelector('.play__video').addEventListener('click', () => {
-//   open_popup(videoPopup);
-// })
-// document.querySelector('.video__close').addEventListener('click', () => {
-//   close_popup(videoPopup);
-// })
-// document.querySelector('.open__form').addEventListener('click', () => {
-//   open_popup(formPopup);
-// })
-// document.querySelector('.form__close').addEventListener('click', () => {
-//   close_popup(formPopup);
-// })
-// document.querySelector('.fill__form').addEventListener('click', () => {
-//   open_popup(formPopup);
-// })
-// document.querySelector('.thk__close').addEventListener('click', () => {
-//   close_popup(thkPopup);
-// })
-// document.querySelector('.thk__btn').addEventListener('click', () => {
-//   close_popup(thkPopup);
-// })
-document.querySelector('.form__submit').addEventListener('submit', (event) => {
-  event.preventDefault();
-  close_popup(formPopup);
-  open_popup(formPopup);
-})
-
 
 function open_popup(popup) {
   popup.style.display = 'flex';
@@ -128,9 +134,41 @@ function close_popup(popup) {
   popup.style.display = 'none';
 }
 
-document.querySelector('#year').innerHTML = new Date().getFullYear()
 
-function visible(elem) {
+
+document.querySelector('.form__submit').addEventListener('click', () => {
+  close_popup(formPopup);
+  open_popup(thkPopup);
+})
+document.querySelector('#year').innerHTML = new Date().getFullYear();
+
+
+let nameInput = document.querySelector('#name-input');  // валидатор
+let phoneInput = document.querySelector('#phone-input');
+let checkbox = document.querySelector('#agreement-checkbox');
+let submitBtn = document.querySelector('.form__submit');
+
+nameInput.addEventListener('keyup', () => {
+  validateForm();
+})
+phoneInput.addEventListener('keyup', () => {
+  validateForm();
+})
+
+function changeChechbox() {
+  checkbox.classList.contains("checked") === false ? checkbox.checked = true : checkbox.checked = false;
+  document.querySelector('.check__label input').classList.toggle('checked');
+}
+
+function validateForm() {
+  if (nameInput.value != '' && phoneInput.value != '' && checkbox.checked === true) {
+    submitBtn.disabled = false;
+  } else {
+    submitBtn.disabled = true;
+  }
+}
+
+function visible(elem) { //события при скролле
   var docViewTop = $(window).scrollTop(),
     docViewBottom = docViewTop + $(window).height(),
     elemTop = $(elem).offset().top,
@@ -153,7 +191,7 @@ window.addEventListener('scroll', function findMap() {
 })
 
 
-function fillCounter() {
+function fillCounter() {  //счетчик сотрудников
   let counter = document.querySelector('.counter');
   let counterInterval = setInterval(counterAdd, Math.floor(Math.random() * 50) + 1);
 
@@ -166,7 +204,7 @@ function fillCounter() {
   }
 }
 
-function showDots() {
+function showDots() { //заполнение точек
 
   let dots = document.querySelectorAll('.map__dot');
 
@@ -181,7 +219,7 @@ function showDots() {
 
 let descrBlock = document.querySelectorAll('.advantages__elem');
 
-for (let i = 1; i <= descrBlock.length; i++) {
+for (let i = 1; i <= descrBlock.length; i++) { //показать преимущества
 
   window.addEventListener('scroll', function look_scroll() {
     if (visible('[data-order="' + i + '"]')) {
@@ -195,11 +233,8 @@ let showEmployees = document.querySelectorAll('.show__more');
 
 showEmployees.forEach(btn => {
   btn.addEventListener('click', () => {
-
-   
-   
-    if(btn.classList.contains('active')){
-        btn.innerHTML = 'Читать далее'
+    if (btn.classList.contains('active')) {
+      btn.innerHTML = 'Читать далее'
     } else {
       btn.innerHTML = 'Скрыть'
     }
@@ -214,3 +249,9 @@ function showAdvantages(block) {
   document.querySelector(block + ' p').style.top = '0';
 
 }
+
+function showFile(){
+  console.log(1);
+}
+
+

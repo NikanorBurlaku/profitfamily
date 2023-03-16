@@ -18,7 +18,7 @@
             <span class="burger-menu_button mobile">
                 <span class="burger-menu_lines"></span>
             </span>
-            <span class="logo">
+            <a href="/index.html" class="logo">
                 <svg width="111" height="42" viewBox="0 0 111 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M61.7092 11.7101C61.7092 18.1154 57.0058 22.7879 50.5695 22.7879C44.0714 22.7879 39.368 18.1154 39.368 11.7101C39.368 5.30481 44.0714 0.632324 50.5695 0.632324C57.0058 0.632324 61.7092 5.30481 61.7092 11.7101ZM45.0306 11.7101C45.0306 14.9283 47.4442 17.4037 50.5695 17.4037C53.633 17.4037 56.0466 14.8973 56.0466 11.7101C56.0466 8.52294 53.633 6.01651 50.5695 6.01651C47.4442 6.01651 45.0306 8.49199 45.0306 11.7101Z"
@@ -49,9 +49,9 @@
                         d="M105.538 35.432L102.52 30.4326H100.941L104.857 36.8869V41.1742H106.219V36.8869L110.135 30.4326H108.556L105.538 35.432Z"
                         fill="white" />
                 </svg>
-            </span>
+            </a>
             <nav class="nav">
-                <span class="logo mobile">
+                <a href="/index.html" class="logo mobile">
                     <svg width="111" height="42" viewBox="0 0 111 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M61.7092 11.7101C61.7092 18.1154 57.0058 22.7879 50.5695 22.7879C44.0714 22.7879 39.368 18.1154 39.368 11.7101C39.368 5.30481 44.0714 0.632324 50.5695 0.632324C57.0058 0.632324 61.7092 5.30481 61.7092 11.7101ZM45.0306 11.7101C45.0306 14.9283 47.4442 17.4037 50.5695 17.4037C53.633 17.4037 56.0466 14.8973 56.0466 11.7101C56.0466 8.52294 53.633 6.01651 50.5695 6.01651C47.4442 6.01651 45.0306 8.49199 45.0306 11.7101Z"
@@ -83,7 +83,7 @@
                             d="M105.538 35.432L102.52 30.4326H100.941L104.857 36.8869V41.1742H106.219V36.8869L110.135 30.4326H108.556L105.538 35.432Z"
                             fill="white" />
                     </svg>
-                </span>
+                </a>
                 <ul>
                     <li><a href="#we" class="nav__link">Кто мы</a></li>
                     <li><a href="#advantages" class="nav__link">Преимущества</a></li>
@@ -311,13 +311,15 @@
                         <span class="gradient"></span>
                     </div>
                     <h3 class="employee__name">Александр Федотов, тимлид</h3>
-                    <div class="employee__description"> 
+                    <div class="employee__description">
                         <p>
-                        Саша - архитектор и тимлид проекта RTB аукцион. Это внутренняя
-                        система ротации с нагрузкой в 6000 rps в пике<span class="ellipsis">...</span><span class="employee__hidden">.
-                            Опыт в разработке у Саши составляет 10+ лет. Основной стек: Golang, NET. Он работает в
-                            ProfitFamily с 2018 года, проект RTB писался с нуля под его началом. Саша управляет командой
-                            middle и senior разработчиков, которые пишут на C# и Golang.</span></p>
+                            Саша - архитектор и тимлид проекта RTB аукцион. Это внутренняя
+                            система ротации с нагрузкой в 6000 rps в пике<span class="ellipsis">...</span><span
+                                class="employee__hidden">.
+                                Опыт в разработке у Саши составляет 10+ лет. Основной стек: Golang, NET. Он работает в
+                                ProfitFamily с 2018 года, проект RTB писался с нуля под его началом. Саша управляет
+                                командой
+                                middle и senior разработчиков, которые пишут на C# и Golang.</span></p>
                     </div>
                     <button class="show__more">Читать далее</button>
                 </div>
@@ -329,12 +331,15 @@
                     <h3 class="employee__name">Данил Копылов, CTO</h3>
                     <div class="employee__description">
                         <p>Данил пришёл в ProfitFamily fullstack разработчиком в команду
-                        ads2.bid, дорос до тимлида. Потом полетел<span class="ellipsis">...</span>
-                        <span class="employee__hidden">
-                            на DevOps конференцию и вернулся уже с идеей создания своего отдела. Поработав руководителем
-                            IT
-                            отдела, Данил получил предложение стать CTO компании и сейчас успешно справляется с задачами
-                            руководителя.</span></p>    
+                            ads2.bid, дорос до тимлида. Потом полетел<span class="ellipsis">...</span>
+                            <span class="employee__hidden">
+                                на DevOps конференцию и вернулся уже с идеей создания своего отдела. Поработав
+                                руководителем
+                                IT
+                                отдела, Данил получил предложение стать CTO компании и сейчас успешно справляется с
+                                задачами
+                                руководителя.</span>
+                        </p>
                     </div>
                     <button class="show__more">Читать далее</button>
                 </div>
@@ -345,15 +350,16 @@
                     </div>
                     <h3 class="employee__name">Арина Чернова, ведущий бизнес-аналитик</h3>
                     <div class="employee__description">
-                        
-                       <p>Арина пришла в компанию в 2021 году как бизнес-аналитик. Она
-                        занималась самостоятельным<span class="ellipsis">...</span><span class="employee__hidden">
-                            формированием Базы знаний и процессов ProfitFamily, успела описать множество разделов, орг.
-                            структуру, а также выступала администратором при запуске новых проектов и направлений
-                            компании.
-                            А еще Арина - монстр обучения - за время работы в компании посетила несколько проф.
-                            конференций
-                            и прошла множество курсов. Так держать!</span></p> 
+
+                        <p>Арина пришла в компанию в 2021 году как бизнес-аналитик. Она
+                            занималась самостоятельным<span class="ellipsis">...</span><span class="employee__hidden">
+                                формированием Базы знаний и процессов ProfitFamily, успела описать множество разделов,
+                                орг.
+                                структуру, а также выступала администратором при запуске новых проектов и направлений
+                                компании.
+                                А еще Арина - монстр обучения - за время работы в компании посетила несколько проф.
+                                конференций
+                                и прошла множество курсов. Так держать!</span></p>
                     </div>
                     <button class="show__more">Читать далее</button>
                 </div>
@@ -365,14 +371,15 @@
                     <h3 class="employee__name">Вадим Родимкин, байер</h3>
                     <div class="employee__description">
                         <p>
-                        Вадим работает в компании с 2018 года. Изначально приходил как
-                        верстальщик лендингов, но со временем понял<span class="ellipsis">...</span>
-                        <span class="employee__hidden">, что интернет-реклама ему интереснее, и перешел в отдел 
-                            новостного баинга, где работает до сих
-                            пор. Вадиму нравится, что в ProfitFamily можно самому выбрать вектор своего развития, что
-                            выделяются средства на проливы трафика. Еще он отмечает возможность удаленки, частые
-                            корпоративы
-                            и активности (футбол по выходным, чемпионат по фифе, квизы)</span>
+                            Вадим работает в компании с 2018 года. Изначально приходил как
+                            верстальщик лендингов, но со временем понял<span class="ellipsis">...</span>
+                            <span class="employee__hidden">, что интернет-реклама ему интереснее, и перешел в отдел
+                                новостного баинга, где работает до сих
+                                пор. Вадиму нравится, что в ProfitFamily можно самому выбрать вектор своего развития,
+                                что
+                                выделяются средства на проливы трафика. Еще он отмечает возможность удаленки, частые
+                                корпоративы
+                                и активности (футбол по выходным, чемпионат по фифе, квизы)</span>
                         </p>
                     </div>
                     <button class="show__more">Читать далее</button>
@@ -383,14 +390,15 @@
                         <span class="gradient"></span>
                     </div>
                     <h3 class="employee__name">Анна Замыслова, HR</h3>
-                    <div class="employee__description"> 
+                    <div class="employee__description">
                         <p>
-                        Аня присоединилась к ProfitFamily в августе 2021 года с опытом
-                        рекрутера из кадрового агентства. Поначалу она вела<span class="ellipsis">...</span><span class="employee__hidden">
-                            подбор и новую для себя задачу - адаптацию. Со временем стала подключаться к
-                            разнообразным HR проектам и выросла до позиции HR менеджера, который совмещает подбор
-                            персонала
-                            с широким спектром других задач.</span>
+                            Аня присоединилась к ProfitFamily в августе 2021 года с опытом
+                            рекрутера из кадрового агентства. Поначалу она вела<span class="ellipsis">...</span><span
+                                class="employee__hidden">
+                                подбор и новую для себя задачу - адаптацию. Со временем стала подключаться к
+                                разнообразным HR проектам и выросла до позиции HR менеджера, который совмещает подбор
+                                персонала
+                                с широким спектром других задач.</span>
                         </p>
                     </div>
                     <button class="show__more">Читать далее</button>
@@ -403,16 +411,20 @@
                     <h3 class="employee__name">Даниил Смола, тимлид команды баинга</h3>
                     <div class="employee__description">
                         <p>
-                        Даниил пришёл на должность байера в новостной отдел в 2019 году.
-                        С тех пор<span class="ellipsis">...</span><span class="employee__hidden">, 
-                            набравшись опыта, в последующие несколько лет открыл направление Индонезии для закупки
-                            трафика. С 2022 года
-                            занимается развитием своей команды в новостном баинге.</span>
+                            Даниил пришёл на должность байера в новостной отдел в 2019 году.
+                            С тех пор<span class="ellipsis">...</span><span class="employee__hidden">,
+                                набравшись опыта, в последующие несколько лет открыл направление Индонезии для закупки
+                                трафика. С 2022 года
+                                занимается развитием своей команды в новостном баинге.</span>
                         </p>
                     </div>
                     <button class="show__more">Читать далее</button>
                 </div>
 
+            </div>
+            <div class="progress mobile" id="progress-1" role="progressbar" aria-valuemin="20" aria-valuemax="100">
+                <span class="slider__label sr-only">
+                </span>
             </div>
         </section>
         <section class="map">
@@ -497,13 +509,21 @@
                     <img src="images/life-8.png" alt="Photo of company life" loading="lazy">
                     <span class="gradient"></span>
                 </div>
+                <div class="life__img">
+                    <img src="images/life-9.png" alt="Photo of company life" loading="lazy">
+                    <span class="gradient"></span>
+                </div>
+            </div>
+            <div class="progress mobile" id="progress-2" role="progressbar" aria-valuemin="20" aria-valuemax="100">
+                <span class="slider__label sr-only">
+                </span>
             </div>
         </section>
         <section class="faq" id="faq">
             <h2 class="second__title">- FAQ -</h2>
             <div class="faq__block">
-                <div class="faq__elem">
-                    <div class="faq__title--block">
+                <div class="faq__container">
+                    <div class="faq__elem">
                         <h3 class="faq__title third--title">Как проходит адаптация в&nbsp;компании?</h3>
                         <img src="images/arrow-faq.svg" alt="" class="faq__arrow">
                     </div>
@@ -513,8 +533,8 @@
                         материалы для новичка, курс по адаптации и внутренняя База знаний.
                     </p>
                 </div>
-                <div class="faq__elem">
-                    <div class="faq__title--block">
+                <div class="faq__container">
+                    <div class="faq__elem">
                         <h3 class="faq__title third--title">Если я нахожусь не в&nbsp;России, могу ли я устроиться
                             работать
                             в&nbsp;ProfitFamily?</h3>
@@ -525,8 +545,8 @@
                         Оставь заявку, и мы индивидуально подойдем к твоему случаю. Наш часовой пояс для работы - мск.
                     </p>
                 </div>
-                <div class="faq__elem">
-                    <div class="faq__title--block">
+                <div class="faq__container">
+                    <div class="faq__elem">
                         <h3 class="faq__title third--title">Я IT специалист. Есть ли у&nbsp;вас аккредитованная IT
                             компания, куда я
                             могу
@@ -564,14 +584,23 @@
 
     <div class="form__popup">
         <div class="form__block">
-            <form action="">
+            <form onsubmit="event.preventDefault();" action="" enctype='multipart/form-data' method="POST">
                 <div class="form__header">
                     <p class="form__title">Расскажи о себе, и&nbsp;мы свяжемся с&nbsp;тобой в течение трех рабочих дней
                     </p>
-                    <div class="input__group">
-                        <input type="text" name="name" class="form__input" placeholder="Имя*">
-                        <input type="tel" name="phone" class="form__input" placeholder="Телефон*">
-                        <input type="text" name="telegram" class="form__input" placeholder="Телеграм">
+                    <div class="inputs">
+                        <label for="name" class="input__group name__label">
+                            <input type="text" name="name" id="name-input" placeholder="Имя*" class="form__input"
+                                required>
+                        </label>
+                        <label for="name" class="input__group name__label">
+                            <input type="tel" name="phone" id="phone-input" placeholder="Телефон*" class="form__input"
+                                required>
+                        </label>
+                        <label for="name" class="input__group name__label">
+                            <input type="text" name="telegram" id="telegram-input" placeholder="Телеграм"
+                                class="form__input">
+                        </label>
                     </div>
                 </div>
 
@@ -589,10 +618,11 @@
 
                 <div class="change textarea">
                     <div class="file__group">
+                        <textarea name="link" placeholder="Ссылка на резюме" class="form__textarea"></textarea>
                         <textarea name="info" placeholder="Дополнительная информация" class="form__textarea"></textarea>
                     </div>
                     <div class="file__group">
-                        <div class="input__wrapper">
+                        <div class="input__wrapper" onclick="showFile()">
                             <input name="file" type="file" id="input__file" class="input__file" multiple>
                             <label for="input__file" class="input__file-button">
                                 <p class="desktop">Перетащи или <u>загрузи файл</u>
@@ -605,13 +635,16 @@
                     </div>
                 </div>
                 <div class="submit__block">
-                    <label for="checkbox" class="checkbox__label">
-                        <input type="checkbox" name="checkbox">
+                    <div class="agreement">
+                        <label class="check__label">
+                            <input type="checkbox" require="" id="agreement-checkbox" class="checked" checked>
+                            <span class="checkmark" onclick="changeChechbox(); validateForm();"></span>
+                        </label>
                         <p>Я даю свое согласие на обработку персональных данных в соответствии с полным текстом <a
                                 href="/agreement.html">Согласия</a> и <a href="/privacy.html">Политикой
                                 конфиденциальности</a></p>
-                    </label>
-                    <button class="form__submit button" type="submit" >отправить</button>   
+                    </div>
+                    <button class="form__submit button" type="submit" disabled>отправить</button>
                 </div>
 
             </form>
