@@ -29,12 +29,13 @@ $('.first__slider').slick({
   infinite: true,
   arrows: true,
   slidesToShow: 3,
-  slidesToScroll: 1,
+  slidesToScroll: 3,
   responsive: [
     {
       breakpoint: 768,
       settings: {
         slidesToShow: 1,
+        slidesToScroll: 1,
         arrows: false,
       },
     },
@@ -44,12 +45,13 @@ $('.second__slider').slick({
   infinite: true,
   arrows: true,
   slidesToShow: 3,
-  slidesToScroll: 1,
+  slidesToScroll: 3,
   responsive: [
     {
       breakpoint: 768,
       settings: {
         slidesToShow: 1,
+        slidesToScroll: 1,
         arrows: false,
       },
     },
@@ -88,30 +90,30 @@ formPopup = document.querySelector('.form__popup');
 thkPopup = document.querySelector('.thk__popup');
 videoPopup = document.querySelector('.video__popup');
 
-document.querySelector('.video__container').addEventListener('click', () => {
-  open_popup(videoPopup);
-})
-document.querySelector('.play__video').addEventListener('click', () => {
-  open_popup(videoPopup);
-})
-document.querySelector('.video__close').addEventListener('click', () => {
-  close_popup(videoPopup);
-})
-document.querySelector('.open__form').addEventListener('click', () => {
-  open_popup(formPopup);
-})
-document.querySelector('.form__close').addEventListener('click', () => {
-  close_popup(formPopup);
-})
-document.querySelector('.fill__form').addEventListener('click', () => {
-  open_popup(formPopup);
-})
-document.querySelector('.thk__close').addEventListener('click', () => {
-  close_popup(thkPopup);
-})
-document.querySelector('.thk__btn').addEventListener('click', () => {
-  close_popup(thkPopup);
-})
+// document.querySelector('.video__container').addEventListener('click', () => {
+//   open_popup(videoPopup);
+// })
+// document.querySelector('.play__video').addEventListener('click', () => {
+//   open_popup(videoPopup);
+// })
+// document.querySelector('.video__close').addEventListener('click', () => {
+//   close_popup(videoPopup);
+// })
+// document.querySelector('.open__form').addEventListener('click', () => {
+//   open_popup(formPopup);
+// })
+// document.querySelector('.form__close').addEventListener('click', () => {
+//   close_popup(formPopup);
+// })
+// document.querySelector('.fill__form').addEventListener('click', () => {
+//   open_popup(formPopup);
+// })
+// document.querySelector('.thk__close').addEventListener('click', () => {
+//   close_popup(thkPopup);
+// })
+// document.querySelector('.thk__btn').addEventListener('click', () => {
+//   close_popup(thkPopup);
+// })
 document.querySelector('.form__submit').addEventListener('submit', (event) => {
   event.preventDefault();
   close_popup(formPopup);
