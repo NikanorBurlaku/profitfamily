@@ -118,13 +118,13 @@
         <section class="title__block">
             <h1 class="title">Добро пожаловать в&nbsp;<span>семью</span> профессионалов</h1>
             <div class="title__buttons">
-                <button class="open__form button" onclick="open_popup(formPopup)">Хочу к вам</button>
-                <div class="play__video" onclick="open_popup(videoPopup)">Смотреть видео <span class="play__btn">
+                <button class="open__form button" onclick="openPopup(formPopup)">Хочу к вам</button>
+                <div class="play__video" onclick="openPopup(videoPopup)">Смотреть видео <span class="play__btn">
                         <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 6.54102L0.75 13.0362L0.750001 0.0458245L12 6.54102Z" fill="#0F141A" />
                         </svg></span></div>
             </div>
-            <div class="video__container" onclick="open_popup(videoPopup)">
+            <div class="video__container" onclick="openPopup(videoPopup)">
                 <video src="video/short.mp4" width="100%" height="100%" muted autoplay loop loading="lazy"></video>
                 <span class="gradient"></span>
             </div>
@@ -167,7 +167,7 @@
                 </div>
             </div>
 
-            <h3 class="third--title">Наши продукты</h3>
+            <h3 class="third__title">Наши продукты</h3>
             <div class="product__wrapper">
                 <div class="product">
                     <a href="https://oneprofit.ru/" class="product__block">
@@ -228,18 +228,18 @@
             </div>
             <div class="advantages__description">
                 <div class="advantages__elem" data-order="1">
-                    <h3 class=" third--title">Стремительный рост и&nbsp;развитие</h3>
+                    <h3 class=" third__title">Стремительный рост и&nbsp;развитие</h3>
                     <p>За последние 2 года выросли из стартапа в холдинг с разными
                         направленностями бизнеса, расширили команды и запустили новые проекты.</p>
                 </div>
                 <div class="advantages__elem" data-order="2">
-                    <h3 class=" third--title">Команда профессионалов</h3>
+                    <h3 class=" third__title">Команда профессионалов</h3>
                     <p>Ты получишь возможность работать вместе с теми, кто горит
                         продуктом и создавал его с нуля! Это сплоченная команда профи, которые отлично знают
                         архитектуру. Поможем быстро разобраться в проектах новичкам и поделимся своей экспертизой.</p>
                 </div>
                 <div class="advantages__elem" data-order="3">
-                    <h3 class=" third--title">Гибкость, открытость к&nbsp;новому, отсутствие излишнего
+                    <h3 class=" third__title">Гибкость, открытость к&nbsp;новому, отсутствие излишнего
                         контроля</h3>
                     <p>Мы соблюдаем политику открытых дверей и прозрачности в
                         решении вопросов, а еще не любим тиранию. Если ты - часть команды, мы доверяем тебе. Поэтому не
@@ -248,7 +248,7 @@
                         настолки)</p>
                 </div>
                 <div class="advantages__elem" data-order="4">
-                    <h3 class="third--title">Уникальный опыт</h3>
+                    <h3 class="third__title">Уникальный опыт</h3>
                     <p>ProfitFamily создаёт масштабные inhouse продукты в узкой
                         нише CPA маркетинга и programmatic технологий. Мы являемся крупным игроком рынка с крутым
                         функционалом. Мы не зависим от прихоти инвесторов, у нас нет капризных внешних заказчиков,
@@ -257,7 +257,7 @@
                         топовый опыт в adtech.</p>
                 </div>
                 <div class="advantages__elem" data-order="5">
-                    <h3 class=" third--title">Обучение</h3>
+                    <h3 class=" third__title">Обучение</h3>
                     <p>Если есть интересный курс или профессиональная конференция,
                         оплатим их специально для тебя. Еще у нас есть внутренние курсы для сотрудников и каждый месяц
                         пополняемая Онлайн Библиотека. Мы всегда поощряем прокачку скиллов и расширение знаний.</p>
@@ -524,7 +524,7 @@
             <div class="faq__block">
                 <div class="faq__container">
                     <div class="faq__elem">
-                        <h3 class="faq__title third--title">Как проходит адаптация в&nbsp;компании?</h3>
+                        <h3 class="faq__title third__title">Как проходит адаптация в&nbsp;компании?</h3>
                         <img src="images/arrow-faq.svg" alt="" class="faq__arrow">
                     </div>
                     <p class="faq__description">
@@ -535,7 +535,7 @@
                 </div>
                 <div class="faq__container">
                     <div class="faq__elem">
-                        <h3 class="faq__title third--title">Если я нахожусь не в&nbsp;России, могу ли я устроиться
+                        <h3 class="faq__title third__title">Если я нахожусь не в&nbsp;России, могу ли я устроиться
                             работать
                             в&nbsp;ProfitFamily?</h3>
                         <img src="images/arrow-faq.svg" alt="" class="faq__arrow">
@@ -547,7 +547,7 @@
                 </div>
                 <div class="faq__container">
                     <div class="faq__elem">
-                        <h3 class="faq__title third--title">Я IT специалист. Есть ли у&nbsp;вас аккредитованная IT
+                        <h3 class="faq__title third__title">Я IT специалист. Есть ли у&nbsp;вас аккредитованная IT
                             компания, куда я
                             могу
                             устроиться?</h3>
@@ -563,7 +563,7 @@
         <section class="place">
             <h2 class="place__title">Займи <span>свое</span> место в&nbsp;<span>ProfitFamily</span></h2>
             <p class="place__text">Не нашел подходящую вакансию? Давай знакомиться, что-нибудь придумаем</p>
-            <button class="fill__form button" onclick="open_popup(formPopup)">Заполнить анкету</button>
+            <button class="fill__form button" onclick="openPopup(formPopup)">Заполнить анкету</button>
         </section>
         <footer class="footer">
             <div class="footer__title">
@@ -649,7 +649,7 @@
 
             </form>
 
-            <span class="form__close" onclick="close_popup(formPopup)">
+            <span class="form__close" onclick="closePopup(formPopup)">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="square"
                         stroke-linejoin="round" />
@@ -658,13 +658,14 @@
                 </svg>
             </span>
         </div>
+        <div class="overlay" onclick="closePopup(formPopup)"></div>
     </div>
     <div class="thk__popup">
         <div class="thk__block">
             <h3 class="thk__title">Спасибо</h3>
             <p>Мы скоро свяжемся</p>
-            <button class="thk__btn" onclick="close_popup(thkPopup)">хорошо, жду</button>
-            <span class="thk__close" onclick="close_popup(thkPopup)">
+            <button class="thk__btn" onclick="closePopup(thkPopup)">хорошо, жду</button>
+            <span class="thk__close" onclick="closePopup(thkPopup)">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="square"
                         stroke-linejoin="round" />
@@ -673,11 +674,12 @@
                 </svg>
             </span>
         </div>
+        <div class="overlay" onclick="closePopup(thkPopup)"></div>
     </div>
     <div class="video__popup">
         <div class="video__block">
             <video src="video/short.mp4" width="100%" height="100%" muted controls="lazy"></video>
-            <span class="video__close" onclick="close_popup(videoPopup)">
+            <span class="video__close" onclick="closePopup(videoPopup)">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="square"
                         stroke-linejoin="round" />
@@ -686,6 +688,7 @@
                 </svg>
             </span>
         </div>
+        <div class="overlay" onclick="closePopup(videoPopup)"></div>
     </div>
     </div>
     <script src="js/jquery-3.6.4.min.js"></script>

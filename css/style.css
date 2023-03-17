@@ -51,7 +51,7 @@ video {
     text-transform: uppercase;
 }
 
-.third--title {
+.third__title {
     font-weight: 900;
     font-size: 20px;
     line-height: 120%;
@@ -493,7 +493,7 @@ li.main__city {
     font-weight: 400;
 }
 
-.we .third--title {
+.we .third__title {
     margin-top: 30px;
 }
 
@@ -1344,7 +1344,6 @@ li.main__city {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(15, 20, 26, 0.5);
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -1356,12 +1355,22 @@ li.main__city {
 .form__block,
 .thk__block,
 .video__block {
+    z-index: 2;
     position: relative;
     width: 40%;
     padding: 50px;
     background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), #B9BEC4;
     background: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), #B9BEC4;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), #B9BEC4;
+}
+.overlay{
+    background: rgba(15, 20, 26, 0.5);
+    z-index: 1;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
 }
 
 .form__popup form {
@@ -1733,8 +1742,34 @@ li.main__city {
     padding: 8px 18px;
     color: #0F141A;
     text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
 }
 
+.thk__btn::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    background: #FF6F1A;
+    z-index: -1;
+}
+
+.thk__btn:hover {
+    color: #FFF;
+}
+
+.thk__btn:hover::before {
+    top: 0;
+}
 /* video popup */
 
 .video__block {
@@ -1996,7 +2031,7 @@ li.main__city {
         margin-bottom: 18px;
     }
 
-    .we .third--title {
+    .we .third__title {
         margin-top: 45px;
     }
 

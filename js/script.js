@@ -1,7 +1,72 @@
 
-$(document).ready(function() {
-  
-  function burgerMenu(selector) { //adaptive menu
+$(document).ready(function () {
+
+
+  var $slider1 = $('.first__slider');
+  var $progressBar1 = $('#progress-1');
+  var $progressBarLabel1 = $('#progress-1 .slider__label');
+
+  $slider1.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    var calc = ((nextSlide) / (slick.slideCount - 1)) * 100;
+
+    $progressBar1
+      .css('background-size', calc + '% 100%')
+      .attr('aria-valuenow', calc);
+
+    $progressBarLabel1.text(calc + '% completed');
+  });
+
+  $slider1.slick({
+    infinite: true,
+    arrows: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+    ],
+  });
+
+
+  var $slider2 = $('.second__slider');
+  var $progressBar2 = $('#progress-2');
+  var $progressBarLabel2 = $('#progress-2 .slider__label');
+
+  $slider2.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    var calc = ((nextSlide) / (slick.slideCount - 1)) * 100;
+
+    $progressBar2
+      .css('background-size', calc + '% 100%')
+      .attr('aria-valuenow', calc);
+
+    $progressBarLabel2.text(calc + '% completed');
+  });
+
+  $slider2.slick({
+    infinite: true,
+    arrows: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+    ],
+  });
+
+});
+function burgerMenu(selector) { //adaptive menu
   let menu = $(selector);
   let button = menu.find('.burger-menu_button', '.burger-menu_lines');
   let links = menu.find('.burger-menu_link');
@@ -15,6 +80,15 @@ $(document).ready(function() {
   links.on('click', () => toggleMenu());
   overlay.on('click', () => toggleMenu());
 
+
+  let menuLinks = document.querySelectorAll('.nav__link');
+
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      toggleMenu();
+    })
+  });
+
   function toggleMenu() {
     menu.toggleClass('burger-menu_active');
 
@@ -27,72 +101,6 @@ $(document).ready(function() {
 }
 
 burgerMenu('.header')
-
-  var $slider1 = $('.first__slider');
-  var $progressBar1 = $('#progress-1');
-  var $progressBarLabel1 = $( '#progress-1 .slider__label' );
-  
-  $slider1.on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
-    var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
-    
-    $progressBar1
-      .css('background-size', calc + '% 100%')
-      .attr('aria-valuenow', calc );
-    
-    $progressBarLabel1.text( calc + '% completed' );
-  });
-  
-  $slider1.slick({
-    infinite: true,
-      arrows: true,
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-          },
-        },
-      ],
-  });  
-
-
-  var $slider2 = $('.second__slider');
-  var $progressBar2 = $('#progress-2');
-  var $progressBarLabel2 = $( '#progress-2 .slider__label' );
-  
-  $slider2.on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
-    var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
-    
-    $progressBar2
-      .css('background-size', calc + '% 100%')
-      .attr('aria-valuenow', calc );
-    
-    $progressBarLabel2.text( calc + '% completed' );
-  });
-  
-  $slider2.slick({
-    infinite: true,
-      arrows: true,
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-          },
-        },
-      ],
-  });
-
-
-});
 
 
 
@@ -127,18 +135,18 @@ formPopup = document.querySelector('.form__popup'); //скрыть и показ
 thkPopup = document.querySelector('.thk__popup');
 videoPopup = document.querySelector('.video__popup');
 
-function open_popup(popup) {
+function openPopup(popup) {
   popup.style.display = 'flex';
 }
-function close_popup(popup) {
+function closePopup(popup) {
   popup.style.display = 'none';
 }
 
 
 
 document.querySelector('.form__submit').addEventListener('click', () => {
-  close_popup(formPopup);
-  open_popup(thkPopup);
+  closePopup(formPopup);
+  openPopup(thkPopup);
 })
 document.querySelector('#year').innerHTML = new Date().getFullYear();
 
@@ -250,7 +258,7 @@ function showAdvantages(block) {
 
 }
 
-function showFile(){
+function showFile() {
   console.log(1);
 }
 
