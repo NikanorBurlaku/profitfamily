@@ -1134,7 +1134,7 @@ li.main__city {
     height: 80px;
 }
 
-.life__img:nth-of-type(2n) .gradient {
+.life__img .gradient.top {
     top: 0;
     height: 40px;
 }
@@ -1411,6 +1411,22 @@ li.main__city {
     background: #FFFFFF;
     color: #0F141A;
     padding: 8px 14px 10px;
+}
+.form__input::-webkit-input-placeholder, .form__textarea::-webkit-input-placeholder{
+    color: #91969C;
+}
+.form__input::-moz-placeholder, .form__textarea::-moz-placeholder{
+    color: #91969C;
+}
+.form__input:-ms-input-placeholder, .form__textarea:-ms-input-placeholder{
+    color: #91969C;
+}
+.form__input::-ms-input-placeholder, .form__textarea::-ms-input-placeholder{
+    color: #91969C;
+}
+.form__input::placeholder,
+.form__textarea::placeholder{
+    color: #91969C;
 }
 
 .input__group {
@@ -2144,16 +2160,16 @@ li.main__city {
 
     .first__stage {
         margin-top: 45px;
-        padding-left: 120px;
+        display: flex;
         text-align: left;
     }
 
     .first__stage .stage__number {
-        top: 50%;
-        left: 18px;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
+        position: relative;
+        width: 33%;
+    }
+    .stage__text{
+        width: 67%;
     }
 
     .stages__wrapper {
@@ -2437,7 +2453,9 @@ li.main__city {
     .check__label .checkmark:after {
         top: 2px;
     }
-
+    .video__block{
+        width: 90%;
+    }
     .policy__header {
         padding: 16px 16px 0;
     }
