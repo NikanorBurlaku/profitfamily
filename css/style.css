@@ -1796,7 +1796,6 @@ li.main__city {
 }
 
 /* policy */
-.logo {}
 
 .policy__wrapper {
     display: -webkit-box;
@@ -2142,9 +2141,6 @@ li.main__city {
     .advantages__container .gradient {
         height: 40px;
     }
-
-    .stages {}
-
     .stages__title {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
