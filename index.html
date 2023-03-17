@@ -582,9 +582,9 @@
         </footer>
     </div>
 
-    <div class="form__popup">
+    <div class="form__popup" style="display: flex;">
         <div class="form__block">
-            <form onsubmit="event.preventDefault();" action="" enctype='multipart/form-data' method="POST">
+            <form enctype='multipart/form-data' method="POST">
                 <div class="form__header">
                     <p class="form__title">Расскажи о себе, и&nbsp;мы свяжемся с&nbsp;тобой в течение трех рабочих дней
                     </p>
@@ -622,8 +622,8 @@
                         <textarea name="info" placeholder="Дополнительная информация" class="form__textarea"></textarea>
                     </div>
                     <div class="file__group">
-                        <div class="input__wrapper" onclick="showFile()">
-                            <input name="file" type="file" id="input__file" class="input__file" multiple>
+                        <div class="input__wrapper">
+                            <input name="file" type="file" id="input__file" class="input__file" onchange="uploadFile()" multiple>
                             <label for="input__file" class="input__file-button">
                                 <p class="desktop">Перетащи или <u>загрузи файл</u>
                                 </p>
@@ -646,7 +646,9 @@
                     </div>
                     <button class="form__submit button" type="submit" disabled>отправить</button>
                 </div>
-
+                <progress id="progressBar" value="0" max="100" style="width:300px;"></progress>
+                <h3 id="status"></h3>
+                <p id="loaded_n_total"></p>
             </form>
 
             <span class="form__close" onclick="closePopup(formPopup)">
@@ -663,7 +665,7 @@
     <div class="thk__popup">
         <div class="thk__block">
             <h3 class="thk__title">Спасибо</h3>
-            <p>Мы скоро свяжемся</p>
+            <p id="result_form">Мы скоро свяжемся</p>
             <button class="thk__btn" onclick="closePopup(thkPopup)">хорошо, жду</button>
             <span class="thk__close" onclick="closePopup(thkPopup)">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -694,6 +696,19 @@
     <script src="js/jquery-3.6.4.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        $("form").submit(function(e){
+    e.preventDefault();
+    $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $("form").serialize(),
+        success: function(data) {
+            $("#result_form").html(data);
+        }
+    });
+});
+    </script>
 </body>
 
 </html>
