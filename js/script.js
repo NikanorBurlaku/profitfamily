@@ -45,7 +45,7 @@ $(document).ready(function () {
   var $progressBarLabel1 = $('#progress-1 .slider__label');
 
   $slider1.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-    var calc = ((nextSlide) / (slick.slideCount - 1)) * 100;
+    var calc = ((nextSlide + 1) / (slick.slideCount)) * 100;
 
     $progressBar1
       .css('background-size', calc + '% 100%')
@@ -77,7 +77,7 @@ $(document).ready(function () {
   var $progressBarLabel2 = $('#progress-2 .slider__label');
 
   $slider2.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-    var calc = ((nextSlide) / (slick.slideCount - 1)) * 100;
+    var calc = ((nextSlide + 1) / (slick.slideCount)) * 100;
 
     $progressBar2
       .css('background-size', calc + '% 100%')
