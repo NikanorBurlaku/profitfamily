@@ -17,11 +17,14 @@ $(document).ready(function () {
 
     let menuLinks = document.querySelectorAll('.nav__link');
 
-    menuLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        toggleMenu();
+    if($(document).width() <= 1024){
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          toggleMenu();
+        })
       })
-    });
+    }
+   
 
     function toggleMenu() {
       menu.toggleClass('burger-menu_active');
