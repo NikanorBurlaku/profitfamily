@@ -622,7 +622,7 @@
                         Ссылка на резюме
                     </label>
                     <label for="html" class="radio__label">
-                        <input type="radio" id="file" name="radio" class="input__radio" checked>
+                        <input type="radio" id="file" name="radio" class="input__radio" checked  accept=".doc, .docx, .pdf">
                         Файл резюме
                     </label>
                 </div>
@@ -634,7 +634,8 @@
                     </div>
                     <div class="file__group">
                         <div class="input__wrapper">
-                            <input name="file" type="file" id="input__file" class="input__file" multiple>
+                            <input name="file" type="file" id="input__file" class="input__file" multiple  accept=
+                            "application/msword, application/pdf, .doc, .docx">
                             <label for="input__file" class="input__file-button">
                                 <p class="desktop">Перетащи или <u>загрузи файл</u>
                                 </p>
@@ -722,18 +723,18 @@
                     console.log(json);
 
                     // ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
-                    if (json.result == "success") {
-                        // Если сообщение отправлено
-                        alert("Сообщение отправлено");
-                    } else {
-                        // Если произошла ошибка
-                        alert("Ошибка. Сообщение не отправлено");
-                    }
+                    // if (json.result == "success") {
+                    //     // Если сообщение отправлено
+                    //     alert("Сообщение отправлено");
+                    // } else {
+                    //     // Если произошла ошибка
+                    //     alert("Ошибка. Сообщение не отправлено");
+                    // }
                 // Если не удалось связаться с php файлом
                 } else {alert("Ошибка сервера. Номер: "+req.status);}}; 
 
             // Если не удалось отправить запрос. Стоит блок на хостинге
-            req.onerror = function() {alert("Ошибка отправки запроса");};
+            // req.onerror = function() {alert("Ошибка отправки запроса");};
             req.send(new FormData(event.target));
         }
     </script>

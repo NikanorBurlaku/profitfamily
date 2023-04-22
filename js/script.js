@@ -17,14 +17,14 @@ $(document).ready(function () {
 
     let menuLinks = document.querySelectorAll('.nav__link');
 
-    if($(document).width() <= 1024){
+    if ($(document).width() <= 1024) {
       menuLinks.forEach(link => {
         link.addEventListener('click', () => {
           toggleMenu();
         })
       })
     }
-   
+
 
     function toggleMenu() {
       menu.toggleClass('burger-menu_active');
@@ -220,7 +220,7 @@ $(document).ready(function () {
     })
   })
 
- 
+
 
   document.querySelector('.form__submit').addEventListener('click', () => {
     closePopup(formPopup);
@@ -254,8 +254,6 @@ $(document).ready(function () {
     }
   }
 
-  
-  
 });
 
 formPopup = document.querySelector('.form__popup'); //скрыть и показать всплывающие окна
@@ -268,4 +266,8 @@ function openPopup(popup) {
 function closePopup(popup) {
   popup.style.display = 'none';
 }
+
+document.querySelector('#input__file').addEventListener('change', function (e) {
+  document.querySelector('.input__file-button').innerHTML = 'Файл загружен!';
+});
 
